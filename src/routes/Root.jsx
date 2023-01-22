@@ -6,7 +6,7 @@ import Home from './home/Home'
 import Crew from './crew/Crew'
 import Destination from './destination/Destination'
 import Technology from './technology/Technology'
-import Navbar from "../components/navbar/NavBar"
+import Navbar from "../components/navbar/Navbar"
 /*-----------------------------------*/
 
 const Root = () => {
