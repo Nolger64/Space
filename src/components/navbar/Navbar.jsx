@@ -49,7 +49,7 @@ const Navbar = () => {
               <p className={style.NavbarLeftElementId}>02</p> crew
             </Link>
             <Link className={style.NavbarLeftElement} to={'/technology'}>
-              <p className={style.NavbarLeftElementId}>03</p> technologia
+              <p className={style.NavbarLeftElementId}>03</p> technology
             </Link>
           </div>
         )}
@@ -89,7 +89,7 @@ const renderModal = (modalIsOpen, openModal) => {
             <p className={style.ModalContentElementId}>02</p> crew
           </Link>
           <Link className={style.ModalContentElement} to={'/technology'}>
-            <p className={style.ModalContentElementId}>03</p> technologia
+            <p className={style.ModalContentElementId}>03</p> Technology
           </Link>
         </div>
       </div>
