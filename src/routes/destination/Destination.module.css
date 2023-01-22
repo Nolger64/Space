@@ -1,0 +1,74 @@
+/*Contenedores*/
+.DestinationContainer{
+    background-image: url("../../assets/destination/background-destination-desktop.jpg");
+    width: 100%;
+    height: 100vh;
+}
+.DestinationContent{
+    padding-top: 20vh;
+    height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    
+}
+.PickContainer{
+    display: flex;
+}
+.DestinationContentLeft{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.DestinationContentRigth{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+/*---------------------------*/
+.TittlePick{
+    margin: 2rem 0;
+    width: fit-content;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: 300;
+    color: #ffffff;
+    letter-spacing: 0.1rem;
+    display: flex;
+}
+.SubtittlePick{
+    font-weight: 700;
+    margin: 0 1rem;
+    color: #b4b4b4;
+}
+.ImgPick{
+    width: 20rem;
+    height: 20rem;
+    margin: 2rem auto;
+}
+/*NavPick barra de navegacion de los posibles viajes*/
+.NavPick{
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.BtnPick{
+    font-weight: lighter;
+    letter-spacing: -0.02rem;
+    border: none;
+    background: transparent;
+    color: #D0D6F9;
+    font-size: 1em;
+    margin: 0 1rem;
+    text-transform: uppercase;
+}
+/*---------------------------*/
+/*Decripcion del lugar a donde se va a viajar*/
+/*---------------------------*/

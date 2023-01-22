@@ -1,0 +1,112 @@
+.HomeContainer{
+    background-image: url("../../assets/home/background-home-desktop.jpg");
+    width: 100%;
+    height: 100vh;
+}
+.HomeContent{
+    padding-top: 20vh;
+    height: 100vh;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+/*Contenido de la parte izquierda*/
+.HomeContentLeft{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.HomeContenSubtittle{
+    color: #D0D6F9;
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 1.5em;
+}
+.HomeContenTittle{
+    font-family: 'bellefair', serif;
+    color: #D0D6F9;
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 8em;
+    margin: 1rem 0;
+}
+.HomeContentPar{
+    width: 90%;
+    margin: 0 auto;
+    color: #D0D6F9;
+    font-weight: 100;
+    font-size: 1em;
+}
+/*Contenido de la parte derecha*/
+.HomeContentRigth{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.HomeContentRigthBtn{
+    font-family: 'bellefair', serif;
+    background: #D0D6F9;
+    border: none;
+    width: 15rem;
+    height: 15rem;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    color: black;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+/*Para tablets*/
+@media screen and (max-width: 1000px) {
+    .HomeContainer{
+        background-image: url("../../assets/home/background-home-tablet.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .HomeContent{
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .HomeContentLeft{
+        width: 90%;
+    }
+    .HomeContenSubtittle{
+        font-size: 1em;
+    }
+    .HomeContenTittle{
+        font-size: 5em;
+        margin: 0.5rem 0;
+    }
+    .HomeContentPar{
+        width: 60%;
+        font-size: 0.8em;
+    }
+    .HomeContentRigth{
+        width: 100%;
+    }
+    .HomeContentRigthBtn{
+        width: 10rem;
+        height: 10rem;
+        font-size: 1.3rem;
+        margin-top: 3rem;
+    }
+}
+/*Para mobiles*/
+@media screen and (max-width: 600px) {
+    .HomeContainer{
+        background-image: url("../../assets/home/background-home-mobile.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .HomeContent{
+        height: 80%;
+    }
+    .HomeContentPar{
+        width: 80%;
+        font-size: 0.8em;
+    }
+}
