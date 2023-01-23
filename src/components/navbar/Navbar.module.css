@@ -1,5 +1,5 @@
 .Container{
-    position: fixed;
+    position: absolute;
     width: 100%;
 }
 .NavbarContainer{
@@ -92,6 +92,9 @@
     right: 1.5rem;
     top: 2.2rem;
 }
+.NavbarLogo{
+    
+}
 /*Para tabletas*/
 @media screen and (max-width: 1000px) {
     .NavbarHr{
@@ -100,13 +103,7 @@
     .NavbarContainer{
         height: 15vh;
     }
-    .Logo{
-        width: 2.5em;
-    }
 }
 /*Para mobiles*/
 @media screen and (max-width: 600px) {
-    .Logo{
-        width: 2em;
-    }
 }

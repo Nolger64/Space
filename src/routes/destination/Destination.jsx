@@ -9,6 +9,10 @@ import { useState } from "react"; //Importando useState
 const Destination = () => {
   const [select, setSelect] = useState(0); //Estado para seleccionar el destino
   const img = [MoonImg, MarsImg, EuropaImg, TitanImg]; //Array de imagenes
+  //Funcion para seleccionar el destino
+  const SelectDestination = (index) => () => {
+    setSelect(index);
+  };
   return (
     <div className={style.DestinationContainer}>
       <div className={style.DestinationContent}>
@@ -21,22 +25,22 @@ const Destination = () => {
           </div>
           <div className={style.DestinationContentRigth}>
             <nav className={style.NavPick}>
-              <button className={style.BtnPick}>Moon</button>
-              <button className={style.BtnPick}>Mars</button>
-              <button className={style.BtnPick}>Europa</button>
-              <button className={style.BtnPick}>Titan</button>
+              <button className={style.BtnPick} onClick={SelectDestination(0)}>Moon</button>
+              <button className={style.BtnPick} onClick={SelectDestination(1)}>Mars</button>
+              <button className={style.BtnPick} onClick={SelectDestination(2)}>Europa</button>
+              <button className={style.BtnPick} onClick={SelectDestination(3)}>Titan</button>
             </nav>
-            <div>
-              <h1>{data.destinations[select].name}</h1>
-              <h3>{data.destinations[select].description}</h3>
+            <div className={style.DestinationContentRigthText}>
+              <h1 className={style.DestinationTittle}>{data.destinations[select].name}</h1>
+              <h3 className={style.DestinationDescription}>{data.destinations[select].description}</h3>
             </div>
-            <hr />
-            <div>
-              <div>
+            <hr  className={style.DestinationHr}/>
+            <div className={style.DestinationTravel}>
+              <div className={style.DestinationDistance}>
                 <p>avg. Distance</p>
                 <h3>{data.destinations[select].distance}</h3>
               </div>
-              <div>
+              <div className={style.DestinationEst}>
                 <p>Est. travel time</p>
                 <h3>{data.destinations[select].travel}</h3>
               </div>
