@@ -43,42 +43,103 @@
   display: flex;
   justify-content: center;
 }
-.CrewImg{
-    width: 23rem;
-    position: absolute;
-    bottom: 0;
+.CrewImg {
+  width: 23rem;
+  position: absolute;
+  bottom: 0;
 }
 /*Informacion del tripulante*/
+.InfoCrewContainer {
+  width: 80%;
+  height: 20rem;
+  margin: 0 auto 0 1rem;
+}
+.RolCrew {
+  font-size: 1.9rem;
+  font-weight: 300;
+  color: #cecece;
+  margin: 0.8rem 0;
+}
+.NameCrew {
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0.8rem 0;
+}
+.BioCrew {
+  width: 90%;
+  font-size: 1rem;
+  font-weight: 300;
+  color: #cecece;
+  margin: 1rem 0;
+  line-height: 1.5rem;
+}
 /*Botones del Crew*/
-.CrewBtnContainer{
-    
+.CrewBtnContainer {
 }
-.CrewBtn{
-    margin: 0 1rem;
-    width: 1rem;
-    height: 1rem;
-    border: none;
-    border-radius: 50%;
-    background-color: #b8b8b8;
-    cursor: pointer;
+.CrewBtn {
+  margin: 0 1rem;
+  width: 1rem;
+  height: 1rem;
+  border: none;
+  border-radius: 50%;
+  background-color: #b8b8b8;
+  cursor: pointer;
 }
-.CrewBtnSelected{
-    margin: 0 1rem;
-    width: 1.1rem;
-    height: 1.1rem;
-    border: none;
-    border-radius: 50%;
-    background-color: #ffffff;
-    cursor: pointer;
+.CrewBtn:hover {
+  background-color: #dfdfdf;
+}
+.CrewBtnSelected {
+  margin: 0 1rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  border: none;
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
 }
 /*-----------------*/
-@media (max-width: 1000px) {
+/*Para tabletas*/
+@media (max-width: 900px) {
   .CrewContainer {
     background-image: url(../../assets/crew/background-crew-tablet.jpg);
   }
+  .Crew {
+    width: 90%;
+  }
+  .CrewInfoContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .CrewLeftContainer {
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+  }
+  /*Informacion del tripulante*/
+  .InfoCrewContainer {
+    width: 100%;
+    height: auto;
+    margin: 2rem auto;
+  }
+  .RolCrew {
+    font-size: 2rem;
+  }
+  .NameCrew {
+    font-size: 3rem;
+    margin: 1.2rem 0;
+  }
+  .BioCrew {
+    width: 85%;
+    font-size: 1.3rem;
+    margin: 1rem auto;
+    line-height: 1.8rem;
+  }
 }
-@media (max-width: 700px) {
+/*para celulares*/
+@media (max-width: 600px) {
   .CrewContainer {
     background-image: url(../../assets/crew/background-crew-mobile.jpg);
   }
+  
 }
