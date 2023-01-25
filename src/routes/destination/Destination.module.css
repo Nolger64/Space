@@ -139,6 +139,9 @@
   font-size: 1.7em;
   font-weight: 100;
 }
+.DestinationDistanceContent{
+  display: flex;
+}
 /*-----------------------------*/
 /* Diseño responsive para tablets */
 @media (max-width: 1000px) {
