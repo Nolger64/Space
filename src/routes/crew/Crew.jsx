@@ -12,32 +12,92 @@ const Crew = () => {
   const img = [imgDouglas, imgMark, imgVictor, imgAnousheh]; // creo un array con las imagenes
   const changeCrew = (index) => () => setSelect(index); // creo una funcion para cambiar el estado
   const width = useScreen().width; // creo una variable para saber el ancho de la pantalla
-  console.log(width)
+  console.log(width);
   return (
     <div className={style.CrewContainer}>
       <div className={style.Crew}>
         <h1 className={style.TittleCrew}>
           <p className={style.SubTittleCrew}>02 </p>meet your crew
         </h1>
-        {width < 768 ? (console.log("resposivo")):(console.log("no responsivo"))}
-        <div className={style.CrewInfoContainer}>
-          <div className={style.CrewLeftContainer}>
-            <div className={style.InfoCrewContainer}>
-              <h2 className={style.RolCrew}>{data.crew[select].role}</h2>
-              <h1 className={style.NameCrew}>{data.crew[select].name}</h1>
-              <h3 className={style.BioCrew}>{data.crew[select].bio}</h3>
+        {width > 500 ? (
+          <div className={style.CrewInfoContainer}>
+            <div className={style.CrewLeftContainer}>
+              <div className={style.InfoCrewContainer}>
+                <h2 className={style.RolCrew}>{data.crew[select].role}</h2>
+                <h1 className={style.NameCrew}>{data.crew[select].name}</h1>
+                <h3 className={style.BioCrew}>{data.crew[select].bio}</h3>
+              </div>
+              <div className={style.CrewBtnContainer}>
+                <button
+                  onClick={changeCrew(0)}
+                  className={
+                    select == 0 ? style.CrewBtnSelected : style.CrewBtn
+                  }
+                ></button>
+                <button
+                  onClick={changeCrew(1)}
+                  className={
+                    select == 1 ? style.CrewBtnSelected : style.CrewBtn
+                  }
+                ></button>
+                <button
+                  onClick={changeCrew(2)}
+                  className={
+                    select == 2 ? style.CrewBtnSelected : style.CrewBtn
+                  }
+                ></button>
+                <button
+                  onClick={changeCrew(3)}
+                  className={
+                    select == 3 ? style.CrewBtnSelected : style.CrewBtn
+                  }
+                ></button>
+              </div>
             </div>
-            <div className={style.CrewBtnContainer}>
-              <button onClick={changeCrew(0)} className={select == 0 ? style.CrewBtnSelected : style.CrewBtn}></button>
-              <button onClick={changeCrew(1)} className={select == 1 ? style.CrewBtnSelected : style.CrewBtn}></button>
-              <button onClick={changeCrew(2)} className={select == 2 ? style.CrewBtnSelected : style.CrewBtn}></button>
-              <button onClick={changeCrew(3)} className={select == 3 ? style.CrewBtnSelected : style.CrewBtn}></button>
+            <div className={style.CrewRigthContainer}>
+              <img src={img[select]} className={style.CrewImg} />
             </div>
           </div>
-          <div className={style.CrewRigthContainer}>
-            <img src={img[select]} className={style.CrewImg} />
+        ) : (
+          <div>
+            <div className={style.CrewRigthContainer}>
+              <img src={img[select]} className={style.CrewImg} />
+            </div>
+            <div className={style.CrewLeftContainer}>
+              <div className={style.CrewBtnContainer}>
+                <button
+                  onClick={changeCrew(0)}
+                  className={
+                    select == 0 ? style.CrewBtnSelected : style.CrewBtn
+                  }
+                ></button>
+                <button
+                  onClick={changeCrew(1)}
+                  className={
+                    select == 1 ? style.CrewBtnSelected : style.CrewBtn
+                  }
+                ></button>
+                <button
+                  onClick={changeCrew(2)}
+                  className={
+                    select == 2 ? style.CrewBtnSelected : style.CrewBtn
+                  }
+                ></button>
+                <button
+                  onClick={changeCrew(3)}
+                  className={
+                    select == 3 ? style.CrewBtnSelected : style.CrewBtn
+                  }
+                ></button>
+              </div>
+              <div className={style.InfoCrewContainer}>
+                <h2 className={style.RolCrew}>{data.crew[select].role}</h2>
+                <h1 className={style.NameCrew}>{data.crew[select].name}</h1>
+                <h3 className={style.BioCrew}>{data.crew[select].bio}</h3>
+              </div>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

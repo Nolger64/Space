@@ -100,11 +100,13 @@
 }
 /*-----------------*/
 /*Para tabletas*/
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
   .CrewContainer {
     background-image: url(../../assets/crew/background-crew-tablet.jpg);
+    height: fit-content;
   }
   .Crew {
+    height: auto;
     width: 90%;
   }
   .CrewInfoContainer {
@@ -113,6 +115,13 @@
   }
   .CrewLeftContainer {
     width: 90%;
+    height: fit-content;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .CrewRigthContainer{
+    width: 90%;
+    height: fit-content;
     text-align: center;
     margin: 0 auto;
   }
@@ -135,11 +144,65 @@
     margin: 1rem auto;
     line-height: 1.8rem;
   }
+  /*Imagen del tripulante*/
+  .CrewImg {
+    width: 30rem;
+    position: relative;
+    bottom: 0;
+    margin: 2rem 0 0 0;
+  }
 }
 /*para celulares*/
 @media (max-width: 600px) {
+  .InfoCrewContainer{
+    min-height: 20rem;
+    margin: 0 auto;
+  }
   .CrewContainer {
     background-image: url(../../assets/crew/background-crew-mobile.jpg);
+    min-height: 100vh;
+  }
+  /*Titulo de la seccion*/
+  .TittleCrew {
+    margin: 0.5rem auto;
+    text-transform: uppercase;
+    font-size: 1em;
+  }
+  .SubTittleCrew {
+    margin: 0 0.5rem 0 0;
+  }
+  /*Contenedor de la derecha*/
+  .CrewImg{
+    height: 18rem;
+    width: auto;
   }
   
+  /*Botones para selecionar a la tripulacion*/
+  .CrewBtnContainer{
+    margin: 1rem auto;
+  }
+  .CrewBtnSelected{
+    width: 0.9rem;
+    height: 0.9rem;
+    margin: 1rem 0.8rem;
+  }
+  .CrewBtn{
+    width: 0.9rem;
+    height: 0.9rem;
+    margin: 1rem 0.8rem;
+  }
+  /*informacion del tripulante*/
+  .RolCrew{
+    font-size: 1.5rem;
+  }
+  .NameCrew{
+    font-size: 2.8rem;
+    margin: 1.5rem 0;
+  }
+  .BioCrew{
+    width: 90%;
+    font-size: 1rem;
+    margin: 1rem auto;
+    line-height: 1.2rem;
+  }
 }
