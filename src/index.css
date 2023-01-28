@@ -8,3 +8,6 @@
 HTML {
     font-family: 'Roboto', sans-serif;
 }
+body::-webkit-scrollbar {
+    display: none;
+}

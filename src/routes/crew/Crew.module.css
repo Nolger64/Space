@@ -4,13 +4,14 @@
   background-size: cover;
   width: 100%;
   height: 100vh;
+  
 }
 .Crew {
   padding-top: 18vh;
   height: 100vh;
   width: 80%;
   margin: 0 auto;
-  position: relative;
+  position: static;
 }
 .CrewInfoContainer {
   display: flex;
@@ -42,9 +43,10 @@
   width: 50%;
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 .CrewImg {
-  width: 23rem;
+  height: 33rem;
   position: absolute;
   bottom: 0;
 }

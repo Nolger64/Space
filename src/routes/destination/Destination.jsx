@@ -26,6 +26,41 @@ const Destination = () => {
     setSelect(index);
     setIsActive(index);
   };
+  const DescriptionPlanet = () => {
+    return (
+      <>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className={style.DestinationContentRigthText}
+        >
+          <h1 className={style.DestinationTittle}>
+            {data.destinations[select].name}
+          </h1>
+          <h3 className={style.DestinationDescription}>
+            {data.destinations[select].description}
+          </h3>
+        </motion.div>
+        <hr className={style.DestinationHr} />
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className={style.DestinationTravel}
+        >
+          <div className={style.DestinationDistance}>
+            <p>avg. Distance</p>
+            <h3>{data.destinations[select].distance}</h3>
+          </div>
+          <div className={style.DestinationEst}>
+            <p>Est. travel time</p>
+            <h3>{data.destinations[select].travel}</h3>
+          </div>
+        </motion.div>
+      </>
+    );
+  };
   const ImgPlanet = () => {
     return (
       <motion.img
@@ -34,7 +69,7 @@ const Destination = () => {
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{
-          duration: 0.8,
+          duration: 1,
           delay: 0.5,
           ease: [0, 0.71, 0.2, 1.01],
         }}
@@ -83,25 +118,7 @@ const Destination = () => {
                 Titan
               </button>
             </nav>
-            <div className={style.DestinationContentRigthText}>
-              <h1 className={style.DestinationTittle}>
-                {data.destinations[select].name}
-              </h1>
-              <h3 className={style.DestinationDescription}>
-                {data.destinations[select].description}
-              </h3>
-            </div>
-            <hr className={style.DestinationHr} />
-            <div className={style.DestinationTravel}>
-              <div className={style.DestinationDistance}>
-                <p>avg. Distance</p>
-                <h3>{data.destinations[select].distance}</h3>
-              </div>
-              <div className={style.DestinationEst}>
-                <p>Est. travel time</p>
-                <h3>{data.destinations[select].travel}</h3>
-              </div>
-            </div>
+            <DescriptionPlanet />
           </div>
         </div>
       </div>

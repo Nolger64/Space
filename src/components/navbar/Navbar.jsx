@@ -13,9 +13,9 @@ const Navbar = () => {
 
   const openModal = () => {
     setModalIsOpen(!modalIsOpen);
-  };
+  }; // open modal
 
-  Modal.setAppElement("#root");
+  Modal.setAppElement("#root"); // set modal element
 
   return (
     <div className={style.Container}>
@@ -30,7 +30,62 @@ const Navbar = () => {
         {screen < 680 ? (
           <>
             {modalIsOpen ? (
-              <div>{renderModal(modalIsOpen, openModal)}</div>
+              <div>
+                {
+                  <Modal
+                    isOpen={modalIsOpen}
+                    onRequestClose={openModal}
+                    className={style.NavbarModal}
+                    style={{
+                      overlay: {
+                        backgroundColor: "rgba(0, 0, 0, 0.5)",
+                      },
+                    }}
+                  >
+                    <div className={style.ModalContainer}>
+                      <div className={style.ModalContent}>
+                        <div className={style.ModalClose}>
+                          <img
+                            className={style.menuClose}
+                            src={menuClose}
+                            onClick={openModal}
+                          />
+                        </div>
+                        <Link
+                          className={style.ModalContentElement}
+                          to={"/"}
+                          onClick={openModal}
+                        >
+                          <p className={style.ModalContentElementId}>00</p> home
+                        </Link>
+                        <Link
+                          className={style.ModalContentElement}
+                          to={"/destination"}
+                          onClick={openModal}
+                        >
+                          <p className={style.ModalContentElementId}>01</p>{" "}
+                          destination
+                        </Link>
+                        <Link
+                          className={style.ModalContentElement}
+                          to={"/crew"}
+                          onClick={openModal}
+                        >
+                          <p className={style.ModalContentElementId}>02</p> crew
+                        </Link>
+                        <Link
+                          className={style.ModalContentElement}
+                          to={"/technology"}
+                          onClick={openModal}
+                        >
+                          <p className={style.ModalContentElementId}>03</p>{" "}
+                          Technology
+                        </Link>
+                      </div>
+                    </div>
+                  </Modal>
+                }
+              </div>
             ) : (
               <div className={style.NavbarLeftOpenMenu}>
                 <img src={menuOpen} onClick={openModal} />
@@ -39,16 +94,16 @@ const Navbar = () => {
           </>
         ) : (
           <div className={style.NavbarLeftContainer}>
-            <Link className={style.NavbarLeftElement} to={'/'} >
+            <Link className={style.NavbarLeftElement} to={"/"}>
               <p className={style.NavbarLeftElementId}>00</p> home
             </Link>
-            <Link className={style.NavbarLeftElement} to={'/destination'}>
+            <Link className={style.NavbarLeftElement} to={"/destination"}>
               <p className={style.NavbarLeftElementId}>01</p> destination
             </Link>
-            <Link className={style.NavbarLeftElement} to={'/crew'}>
+            <Link className={style.NavbarLeftElement} to={"/crew"}>
               <p className={style.NavbarLeftElementId}>02</p> crew
             </Link>
-            <Link className={style.NavbarLeftElement} to={'/technology'}>
+            <Link className={style.NavbarLeftElement} to={"/technology"}>
               <p className={style.NavbarLeftElementId}>03</p> technology
             </Link>
           </div>
@@ -59,6 +114,7 @@ const Navbar = () => {
 };
 export default Navbar;
 const renderModal = (modalIsOpen, openModal) => {
+  console.log(modalIsOpen);
   return (
     <Modal
       isOpen={modalIsOpen}
@@ -71,6 +127,7 @@ const renderModal = (modalIsOpen, openModal) => {
       }}
     >
       <div className={style.ModalContainer}>
+        <button onClick={openModal}>Close or open</button>
         <div className={style.ModalClose}>
           <img
             className={style.menuClose}
@@ -79,16 +136,16 @@ const renderModal = (modalIsOpen, openModal) => {
           />
         </div>
         <div className={style.ModalContent}>
-          <Link className={style.ModalContentElement} to={'/'} >
+          <Link className={style.ModalContentElement} to={"/"}>
             <p className={style.ModalContentElementId}>00</p> home
           </Link>
-          <Link className={style.ModalContentElement} to={'/destination'}>
+          <Link className={style.ModalContentElement} to={"/destination"}>
             <p className={style.ModalContentElementId}>01</p> destination
           </Link>
-          <Link className={style.ModalContentElement} to={'/crew'}>
+          <Link className={style.ModalContentElement} to={"/crew"}>
             <p className={style.ModalContentElementId}>02</p> crew
           </Link>
-          <Link className={style.ModalContentElement} to={'/technology'}>
+          <Link className={style.ModalContentElement} to={"/technology"}>
             <p className={style.ModalContentElementId}>03</p> Technology
           </Link>
         </div>

@@ -1,7 +1,6 @@
 .Container{
     position: absolute;
     width: 100%;
-    z-index: 10;
 }
 .NavbarContainer{
     position: relative;
@@ -100,6 +99,7 @@
 @media screen and (max-width: 1000px) {
     .NavbarHr{
         display: none;
+
     }
     .NavbarContainer{
         height: 15vh;
