@@ -29,92 +29,132 @@
   color: #b4b4b4;
 }
 /*Description technology*/
-.ContainerTechnolgyDes{
-    display: flex;
-    justify-content: space-between;
-    align-self: center;
-    width: 100%;
-    height: auto;
+.ContainerTechnolgyDes {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  width: 100%;
+  height: auto;
 }
-.TechnolgyDesContainer{
-    height: auto;
-    justify-content: center;
-    width: 50%;
-    display: flex;
-    margin-top: 4rem;
+.TechnolgyDesContainer {
+  height: auto;
+  justify-content: center;
+  width: 50%;
+  display: flex;
+  margin-top: 4rem;
 }
-.TechTittleDes{
-    font-size: 3.5em;
-    font-weight: 300;
-    font-family: Bellefair, serif;
-    color: #ffffff;
-    margin: 0 0 1rem 0;
+.TechTittleDes {
+  font-size: 3.5em;
+  font-weight: 300;
+  font-family: Bellefair, serif;
+  color: #ffffff;
+  margin: 0 0 1rem 0;
 }
-.TechDes{
-    font-size: 1em;
-    font-weight: 100;
-    color: #ffffff;
-    margin: 0 0 1rem 0;
-    letter-spacing: 0.03em;
+.TechDes {
+  font-size: 1em;
+  font-weight: 100;
+  color: #ffffff;
+  margin: 0 0 1rem 0;
+  letter-spacing: 0.03em;
 }
 /*btns*/
-.TechnologyBtn{
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    background-color: transparent;
-    border: solid 1px #ffffff;
-    color: #ffffff;
-    font-size: 1.5em;
-    font-family: Bellefair, serif;
-    margin: 0 1.5rem 0 0; 
+.TechnologyBtn {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: transparent;
+  border: solid 1px #ffffff;
+  color: #ffffff;
+  font-size: 1.5em;
+  font-family: Bellefair, serif;
+  margin: 0 1.5rem 0 0;
 }
-.TechnologyBtnSelected{
-    width: 4rem;
-    height: 4rem;
-    border-radius: 50%;
-    border: solid 1px #ffffff;
-    font-size: 1.5em;
-    font-family: Bellefair, serif;
-    margin: 0 1.5rem 0 0; 
-    background-color: #ffffff;
-    color: #000000;
-    scale: 1.1;
+.TechnologyBtnSelected {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: solid 1px #ffffff;
+  font-size: 1.5em;
+  font-family: Bellefair, serif;
+  margin: 0 1.5rem 0 0;
+  background-color: #ffffff;
+  color: #000000;
+  scale: 1.1;
 }
-.TechnologyBtn:hover{
-    transition: all 0.3s ease-in-out;
-    background-color: #afafaf;
-    color: #000000;
+.TechnologyBtn:hover {
+  transition: all 0.3s ease-in-out;
+  background-color: #afafaf;
+  color: #000000;
 }
-.TechnolgyBtnContainer{
-    margin: 1rem 2rem;
-    height: 18rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+.TechnolgyBtnContainer {
+  margin: 1rem 2rem;
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-.TechLeyenda{
-    font-size: 1em;
-    font-weight: 300;
-    color: #ffffff;
-    margin: 1rem 0;
+.TechLeyenda {
+  font-size: 1em;
+  font-weight: 300;
+  color: #ffffff;
+  margin: 1rem 0;
 }
 /*Img technology*/
-.TechImg{
-    width: 23rem;
-    height: auto;
-    position: absolute;
-    right: 0;
+.TechImg {
+  width: 23rem;
+  height: auto;
+  position: absolute;
+  right: 0;
 }
 
 @media (max-width: 1000px) {
   .ContainerTechnolgy {
     background-image: url(../../assets/technology/background-technology-tablet.jpg);
   }
+  .ContainerTechnolgyDes {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+  .TechnolgyBtnContainer{
+    margin: 1rem 0;
+    height: auto;
+    flex-direction: row;
+    margin-bottom: 2rem;
+  }
+  .TechnolgyDesContainer {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 75%;
+    margin: 3rem auto;
+  }
+  /*Img technology*/
+  .TechImg {
+    width: 100vw;
+    position: static;
+  }
 }
 @media (max-width: 768px) {
   .ContainerTechnolgy {
     background-image: url(../../assets/technology/background-technology-mobile.jpg);
+  }
+  .TechnolgyDesContainer {
+    width: 90%;
+  }
+  .TechnologyBtn{
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.2em;
+  }
+  .TechnologyBtnSelected{
+    scale: 1.03;
+    font-size: 1.2em;
+  }
+  .TechnolgyTittle {
+    font-size: 1.2em;
+    margin: 0;
   }
 }

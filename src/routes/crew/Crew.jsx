@@ -84,12 +84,7 @@ const Crew = () => {
         ) : (
           <div>
             <div className={style.CrewRigthContainer}>
-              <motion.img
-                initial={{ y: 100, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                src={imgCrew}
-                className={style.CrewImg}
-              />
+              <ImgCrew />
             </div>
             <div className={style.CrewLeftContainer}>
               <div className={style.CrewBtnContainer}>
