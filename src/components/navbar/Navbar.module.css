@@ -95,6 +95,18 @@
 .NavbarLogo{
     
 }
+.NavbarLeftElementSelect{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.9em;
+    margin: 0 1rem;
+    border-bottom: 4px solid #fff;
+    height: 4.3rem;
+}
 /*Para tabletas*/
 @media screen and (max-width: 1000px) {
     .NavbarHr{

@@ -5,16 +5,17 @@ import menuOpen from "../../assets/shared/icon-hamburger.svg"; // import menu ic
 import menuClose from "../../assets/shared/icon-close.svg"; // import close menu icon
 import Modal from "react-modal"; // import modal
 import { useState } from "react"; // import useState
-import { Link } from "react-router-dom";
+import { Link,useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const screen = useScreen().width; // get screen size
   const [modalIsOpen, setModalIsOpen] = useState(false); // set modal state
-
   const openModal = () => {
     setModalIsOpen(!modalIsOpen);
   }; // open modal
-
+  const location = useLocation(); // get location
+  const { pathname } = location; // get pathname
+  console.log(pathname)
   Modal.setAppElement("#root"); // set modal element
 
   return (
@@ -94,16 +95,16 @@ const Navbar = () => {
           </>
         ) : (
           <div className={style.NavbarLeftContainer}>
-            <Link className={style.NavbarLeftElement} to={"/"}>
+            <Link className={pathname == "/" ? style.NavbarLeftElementSelect : style.NavbarLeftElement} to={"/"}>
               <p className={style.NavbarLeftElementId}>00</p> home
             </Link>
-            <Link className={style.NavbarLeftElement} to={"/destination"}>
+            <Link className={pathname == "/destination" ? style.NavbarLeftElementSelect : style.NavbarLeftElement} to={"/destination"}>
               <p className={style.NavbarLeftElementId}>01</p> destination
             </Link>
-            <Link className={style.NavbarLeftElement} to={"/crew"}>
+            <Link className={pathname == "/crew" ? style.NavbarLeftElementSelect : style.NavbarLeftElement} to={"/crew"}>
               <p className={style.NavbarLeftElementId}>02</p> crew
             </Link>
-            <Link className={style.NavbarLeftElement} to={"/technology"}>
+            <Link className={pathname == "/technology" ? style.NavbarLeftElementSelect : style.NavbarLeftElement} to={"/technology"}>
               <p className={style.NavbarLeftElementId}>03</p> technology
             </Link>
           </div>
